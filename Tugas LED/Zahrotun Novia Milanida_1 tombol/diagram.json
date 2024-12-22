@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "author": "Zahrotun Novia Milanida",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -138, "left": 32.6, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -138,
+      "left": 90.2,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -138,
+      "left": 147.8,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -62.4,
+      "left": 37.85,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -62.4,
+      "left": 95.45,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -62.4,
+      "left": 153.05,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn1",
+      "top": 218.6,
+      "left": 134.4,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "led1:A", "r1:1", "red", [ "v0" ] ],
+    [ "r1:2", "uno:13", "red", [ "h0", "v18", "h57.6" ] ],
+    [ "led2:A", "r2:1", "yellow", [ "v0" ] ],
+    [ "r2:2", "uno:12", "yellow", [ "h0" ] ],
+    [ "led3:A", "r3:1", "limegreen", [ "v0" ] ],
+    [ "r3:2", "uno:11", "limegreen", [ "h0" ] ],
+    [ "led1:C", "uno:GND.1", "gray", [ "v0" ] ],
+    [ "led2:C", "uno:GND.1", "gray", [ "v0" ] ],
+    [ "led3:C", "uno:GND.1", "gray", [ "v0" ] ],
+    [ "uno:10", "btn1:1.l", "cyan", [ "v87", "h-57.5", "v124.8" ] ],
+    [ "uno:5V", "btn1:2.l", "cyan", [ "v19.7", "h-54.4", "v28.8" ] ]
+  ],
+  "dependencies": {}
+}
