@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "author": "Zahrotun Novia Milanida",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": -187.02,
+      "left": 72.28,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg2",
+      "top": -187.02,
+      "left": 129.88,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -34.45,
+      "left": -48,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 215.15,
+      "left": 0,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "sevseg1:A", "uno:2", "cyan", [ "v-8.76", "h134.4" ] ],
+    [ "sevseg1:B", "uno:3", "yellow", [ "v-18.36", "h115.2" ] ],
+    [ "sevseg1:C", "uno:4", "limegreen", [ "v28.8", "h115.2" ] ],
+    [ "sevseg1:D", "uno:5", "magenta", [ "v38.4", "h124.8" ] ],
+    [ "sevseg1:E", "uno:6", "purple", [ "v48", "h124.8" ] ],
+    [ "sevseg1:F", "uno:7", "white", [ "v-18.36", "h0", "v0", "h-28.8", "v144", "h134.4" ] ],
+    [ "sevseg1:G", "uno:8", "gray", [ "v-8.76", "h-28.8", "v144", "h124.8" ] ],
+    [ "sevseg2:A", "uno:9", "violet", [ "v0.84", "h19.2", "v86.4", "h-28.8" ] ],
+    [ "sevseg2:B", "uno:10", "blue", [ "v0.84", "h19.2", "v76.8", "h-38.4" ] ],
+    [ "sevseg2:C", "uno:11", "gold", [ "v19.2", "h-19.2", "v105.6" ] ],
+    [ "sevseg2:D", "uno:12", "orange", [ "v19.2", "h-9.6" ] ],
+    [ "sevseg2:E", "uno:13", "red", [ "v19.2", "h-9.6" ] ],
+    [ "sevseg2:F", "uno:A0", "orange", [ "v-27.96", "h134.4", "v422.4", "h-67.2" ] ],
+    [ "sevseg2:G", "uno:A1", "#8f4814", [ "v-37.56", "h153.6", "v441.6", "h-67.2" ] ],
+    [ "sevseg1:COM.1", "r1:1", "black", [ "h0" ] ],
+    [ "r1:2", "uno:GND.1", "black", [ "v0", "h104.4" ] ],
+    [ "sevseg2:COM.1", "r2:1", "black", [ "h144", "v345.6", "h-297.6", "v-9.6" ] ],
+    [ "r2:2", "uno:GND.2", "black", [ "v-9.6", "h114" ] ]
+  ],
+  "dependencies": {}
+}

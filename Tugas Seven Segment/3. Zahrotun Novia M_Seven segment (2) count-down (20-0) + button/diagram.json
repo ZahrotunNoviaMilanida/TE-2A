@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "author": "Zahrotun Novia Milanida",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -9, "left": -0.6, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": -129.42,
+      "left": 120.28,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg2",
+      "top": -129.42,
+      "left": 177.88,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 215.15,
+      "left": 201.6,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -53.35,
+      "left": 17.8,
+      "rotate": 180,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn1",
+      "top": 237.8,
+      "left": 163.2,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "sevseg1:B", "uno:10", "green", [ "v-8.76", "h9.6", "v115.2", "h19.2" ] ],
+    [ "sevseg1:C", "uno:11", "magenta", [ "v38.4", "h28.8" ] ],
+    [ "sevseg1:D", "uno:12", "blue", [ "v38.4", "h28.8" ] ],
+    [ "sevseg1:E", "uno:13", "cyan", [ "v0" ] ],
+    [ "sevseg1:F", "uno:A0", "orange", [ "v-27.96", "h144", "v355.2", "h-76.8", "v-9.6" ] ],
+    [ "sevseg1:G", "uno:A1", "violet", [ "v-18.36", "h163.2", "v355.2", "h-76.8", "v0" ] ],
+    [ "sevseg2:A", "uno:2", "white", [ "v-8.76", "h0", "v0", "h38.4" ] ],
+    [ "sevseg2:B", "uno:3", "#8f4814", [ "v0.84", "h9.6" ] ],
+    [ "sevseg2:C", "uno:4", "gold", [ "v0" ] ],
+    [ "sevseg2:D", "uno:5", "blue", [ "v38.4", "h9.6" ] ],
+    [ "sevseg2:E", "uno:6", "yellow", [ "v38.4", "h19.2" ] ],
+    [ "sevseg2:F", "uno:7", "cyan", [ "v-37.56", "h57.6", "v144", "h0", "v9.6", "h-67.2" ] ],
+    [ "sevseg2:G", "uno:8", "gold", [ "v-37.56", "h0", "v0", "h-76.8", "v153.6", "h67.2" ] ],
+    [ "sevseg1:A", "uno:9", "violet", [ "v-8.76", "h-57.6", "v96", "h67.2" ] ],
+    [ "sevseg1:COM.1", "r3:1", "black", [ "h0", "v9.6" ] ],
+    [ "r3:2", "uno:GND.1", "black", [ "v19.2", "h97.2" ] ],
+    [ "sevseg2:COM.1", "r2:2", "black", [ "h0", "v38.4", "h96", "v240" ] ],
+    [ "r2:1", "uno:GND.2", "black", [ "v-19.2", "h0", "v0", "h48" ] ],
+    [ "uno:5V", "btn1:1.l", "red", [ "v0" ] ],
+    [ "btn1:2.l", "uno:A2", "green", [ "h0", "v10", "h67.2" ] ]
+  ],
+  "dependencies": {}
+}
